@@ -1,0 +1,52 @@
+@use "@sds/typography/salda" as *;
+
+.heading1 {
+  @include typography($heading1);
+}
+.heading2 {
+  @include typography($heading2);
+}
+.heading3 {
+  @include typography($heading3);
+}
+.heading4 {
+  @include typography($heading4);
+}
+
+.subtitle1 {
+  @include typography($subtitle1);
+}
+.subtitle2 {
+  @include typography($subtitle2);
+}
+.subtitle3 {
+  @include typography($subtitle3);
+}
+
+.body1 {
+  @include typography($body1);
+}
+.body2 {
+  @include typography($body2);
+}
+
+.caption1 {
+  @include typography($caption1);
+}
+.caption2 {
+  @include typography($caption2);
+}
+
+.container {
+  // font-family: $font-family;
+  display: grid;
+  gap: 16px;
+  padding: 0 16px;
+
+  .card {
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}

@@ -1,0 +1,52 @@
+@use "variables" as *;
+
+@function state-color($state, $color) {
+  $map: ();
+  @if $state == "success" {
+    $map: map-get($stateColor, success);
+  } @else if $state == "warning" {
+    $map: map-get($stateColor, warning);
+  } @else if $state == "informative" {
+    $map: map-get($stateColor, informative);
+  }
+  @return map-get($map, $color);
+}
+
+@function system-color($area, $color) {
+  $map: ();
+  @if $area == "background" {
+    $map: map-get($systemColor, background);
+  } @else if $area == "divider" {
+    $map: map-get($systemColor, divider);
+  } @else if $area == "informative" {
+    // $modal은 map이 아니다.
+    @return map-get($systemColor, modal);
+  } @else if $area == "skeleton" {
+    // skeleton은 map이 아니다.
+    @return map-get($systemColor, skeleton);
+  }
+  @return map-get($map, $color);
+}
+
+@function interactive-color($state, $color) {
+  $map: ();
+  @if $state == "enabled" {
+    $map: map-get($interactiveColor, enabled);
+  } @else if $state == "pressed" {
+    $map: map-get($interactiveColor, pressed);
+  } @else if $state == "disabled" {
+    // disabled는 map이 아니다.
+    @return map-get($interactiveColor, disabled);
+  }
+  @return map-get($map, $color);
+}
+
+@function text-color($map, $value) {
+  $map: ();
+  @if $state == "text" {
+    $map: map-get($textColor, text);
+  } @else if $state == "button-text" {
+    $map: map-get($textColor, button-text);
+  }
+  @return map-get($map, $color);
+}

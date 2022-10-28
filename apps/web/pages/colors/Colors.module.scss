@@ -1,0 +1,24 @@
+@use "@sds/colors/salda" as *;
+
+.container {
+  display: grid;
+  gap: 16px;
+}
+
+.State {
+  width: 500px;
+  height: 500px;
+  background-color: state-color("success", "main");
+}
+
+.System {
+  width: 500px;
+  height: 500px;
+  background-color: system-color("background", "secondary");
+}
+
+.Interactive {
+  width: 500px;
+  height: 500px;
+  background-color: interactive-color("enabled", "primary");
+}

@@ -1,0 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.colorStory {
+  display: flex;
+  gap: 20px;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+.semantic {
+  display: grid;
+  gap: 10px;
+}
+
+.colorInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+}
+
+.bordered {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}

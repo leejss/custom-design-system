@@ -1,0 +1,27 @@
+{
+  "name": "playgruond",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sds/typography": "*",
+    "@sds/colors": "*",
+    "next": "12.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@sds/config": "*",
+    "@sds/tsconfig": "*",
+    "eslint": "7.32.0",
+    "next-transpile-modules": "9.0.0",
+    "@types/node": "^17.0.12",
+    "@types/react": "17.0.37",
+    "typescript": "^4.5.3"
+  }
+}

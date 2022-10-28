@@ -1,0 +1,58 @@
+@use "base" as *;
+
+$stateColor: (
+  success: (
+    main: $primary400,
+    sub: $primary50,
+  ),
+  warning: (
+    main: $alert600,
+    sub: $alert50,
+  ),
+  informative: (
+    main: $point600,
+    sub: $point50,
+  ),
+);
+
+$systemColor: (
+  background: (
+    primary: $white,
+    secondary: $gray50,
+  ),
+  divider: (
+    section: $gray200,
+    item: $gray50,
+  ),
+  modal: rgba($black, 0.4),
+  skeleton: $gray200,
+);
+
+$interactiveColor: (
+  enabled: (
+    primary: $primary400,
+    secondary: $white,
+    tertiary: $point600,
+  ),
+  pressed: (
+    primary: $primary800,
+    secondary: $gray200,
+    tertiary: $point900,
+  ),
+  disabled: $gray400,
+);
+
+$textColor: (
+  text: (
+    primary: $gray900,
+    secondary: $gray700,
+    tertiary: $gray600,
+    disabled: $gray400,
+  ),
+  button-text: (
+    primary: $white,
+    secondary: $gray900,
+    tertiary: $white,
+    disabled: $gray400,
+  ),
+);

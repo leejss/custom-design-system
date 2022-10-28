@@ -1,0 +1,89 @@
+@use "sass:string";
+@use "sass:map";
+
+$font-family: string.unquote(
+  "Spoqa Han Sans Neo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif"
+);
+
+$font-size-value: (
+  xsmall: 12px,
+  small: 14px,
+  medium: 16px,
+  large: 20px,
+  xlarge: 24px,
+);
+
+$font-weight-value: (
+  light: 100,
+  regular: 400,
+  medium: 500,
+  bold: 600,
+);
+
+@function get-font-size($size) {
+  @return map-get($font-size-value, $size);
+}
+
+@function get-font-weight($weight) {
+  @return map-get($font-weight-value, $weight);
+}
+
+$heading1: (
+  font-size: get-font-size(xlarge),
+  font-weight: get-font-weight(bold),
+  letter-spacing: -0.32px,
+);
+$heading2: (
+  font-size: get-font-size(xlarge),
+  font-weight: get-font-weight(light),
+  letter-spacing: -0.32px,
+);
+$heading3: (
+  font-size: get-font-size(large),
+  font-weight: get-font-weight(bold),
+);
+$heading4: (
+  font-size: get-font-size(large),
+  font-weight: get-font-weight(regular),
+);
+
+$subtitle1: (
+  font-size: get-font-size(medium),
+  font-weight: get-font-weight(bold),
+);
+$subtitle2: (
+  font-size: get-font-size(small),
+  font-weight: get-font-weight(bold),
+);
+$subtitle3: (
+  font-size: get-font-size(small),
+  font-weight: get-font-weight(medium),
+);
+
+$body1: (
+  font-size: get-font-size(medium),
+  font-weight: get-font-weight(regular),
+);
+$body2: (
+  font-size: get-font-size(small),
+  font-weight: get-font-weight(regular),
+);
+
+$caption1: (
+  font-size: get-font-size(xsmall),
+  font-weight: get-font-weight(bold),
+);
+$caption2: (
+  font-size: get-font-size(xsmall),
+  font-weight: get-font-weight(regular),
+);
+
+@mixin typography($map) {
+  @each $style, $value in $map {
+    #{$style}: $value;
+  }
+  @if map-has-key($map, letter-spacing) != true {
+    letter-spacing: 0;
+  }
+  line-height: 1.5;
+}

@@ -1,0 +1,13 @@
+.layout {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  gap: 16px;
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background-color: greenyellow;
+  }
+}

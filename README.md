@@ -16,21 +16,21 @@
 For npm users:
 
 ```shell
-# your-path/Salda-Design-System/
+
 npm install
 ```
 
 For Yarn users:
 
 ```shell
-# your-path/Salda-Design-System/
+
 yarn
 ```
 
 ## Explore
 
 ```shell
-# your-path/Salda-Design-System/packages/component-library
+
 yarn storybook
 ```
 
